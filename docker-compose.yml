@@ -15,7 +15,20 @@ services:
     image: pmckee/crud-backend:1.0.0
     build:
       context: ./backend
+    environment: 
+      - "DB_CONN_STR=mongodb://db:27017/crud-datastore"
     networks: 
+      - backend
+    # deploy:
+    #   replicas: 4
+    #   update_config:
+    #     parallelism: 2
+
+  db:
+    image: mongo
+    ports: 
+      - "27017:27017"
+    networks:
       - backend
 
 networks: 
