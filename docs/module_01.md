@@ -19,16 +19,15 @@ docker compose up, down, ps
 1. Create a docker compose file
     1. `touch docker-compose.yml`
 
-```		
-version: "3.8"
+        ```		
+        version: "3.8"
 
-services:
- webserver:
-   image: nginx
-   ports:
-     - "80:80"
-```
-
+        services:
+        webserver:
+        image: nginx
+        ports:
+            - "80:80"
+        ```
 
 2. Deploy with compose
     - `docker compose up`
@@ -44,5 +43,3 @@ services:
         1. Make sure you are using the ecs context created above
         2. `docker compose use ecs`
         3. `docker compose down`
-
-        

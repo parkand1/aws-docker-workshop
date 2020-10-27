@@ -1,18 +1,11 @@
 # Securing your containers with AWS Secrets Manager
 
-1. Change to private repo in hub
-    1. Navigate to hub.docker.com
-    2. Select the `<hubaccount>/crud-frontend`
-    3. Click settings
-    4. Click “Make Private” and type the name of your repo
-    5 .Repeat steps 1-4 for the `<hubaccount>/crud-backend`
-3. Setup a Volume to persist data
-4. Refactor backend code to connect to MongoDB
+1. Refactor backend code to connect to MongoDB
     1. Open path/to/github/repo/backend
     2. Open the server.js file and add update the code:
 ```
-const ronin 		= require( 'ronin-server' )
-const mocks 		= require( 'ronin-mocks' )
+const ronin     = require( 'ronin-server' )
+const mocks     = require( 'ronin-mocks' )
 const database	= require( 'ronin-database' )
 
 async function main() {
@@ -38,6 +31,14 @@ async function main() {
 
 main()
 ```
+2. Change to private repo in hub
+    1. Navigate to hub.docker.com
+    2. Select the `<hubaccount>/crud-frontend`
+    3. Click settings
+    4. Click “Make Private” and type the name of your repo
+    5 .Repeat steps 1-4 for the `<hubaccount>/crud-backend`
+3. Setup a Volume to persist data
+4. 
 5. Test locally
     1. Switch to default context
         - `docker context use default`
